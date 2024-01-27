@@ -7,6 +7,12 @@
       height={{height}}
       loading="lazy"
       class="topic-tile-thumbnail"
+      onerror="this.onerror=null;this.classList.add('non-image');"
+    />
+  {{else}}
+    <img
+      src="default.jpg"
+      class="non-image"
     />
   {{/if}}
 
