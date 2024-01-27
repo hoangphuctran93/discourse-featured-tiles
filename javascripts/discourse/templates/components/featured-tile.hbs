@@ -1,4 +1,4 @@
-<a href={{url}} [ngClass]="{'has-image': topic.thumbnails, 'none-image': !topic.thumbnails}">
+<a href={{url}}>
   {{#if topic.thumbnails}}
     <img
       src={{fallbackSrc}}
@@ -6,7 +6,7 @@
       width={{width}}
       height={{height}}
       loading="lazy"
-      class="topic-tile-thumbnail"
+      [ngClass]="{'has-image topic-tile-thumbnail': topic.thumbnails, 'none-image topic-tile-thumbnail': !topic.thumbnails}"
     />
   {{/if}}
 
