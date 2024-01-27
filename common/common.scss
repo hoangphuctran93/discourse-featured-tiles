@@ -65,10 +65,10 @@
   }
 }
 .topic-info.none-image{
-  justify-content: start;
+  justify-content: start !important;
   & .topic-title{
-    max-height: 220px;
-    min-height: 220px;
-    margin-top: 40px;
+    max-height: 220px !important;
+    min-height: 220px !important;
+    margin-top: 40px !important;
   }
 }
