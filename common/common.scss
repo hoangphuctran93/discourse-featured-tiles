@@ -67,6 +67,7 @@
 .topic-info.none-image{
   justify-content: start !important;
   & .topic-title{
+    display: block !important;
     max-height: 220px !important;
     min-height: 220px !important;
     margin-top: 40px !important;
