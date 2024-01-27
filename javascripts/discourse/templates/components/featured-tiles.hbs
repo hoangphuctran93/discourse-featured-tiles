@@ -1,13 +1,21 @@
-{{#if shouldDisplay}}
-  <div class="featured-tiles-container">
-    {{#each filteredTopics as |topic|}}
-      {{featured-tile topic=topic}}
-    {{/each}}
-  </div>
+<a href={{url}} [ngClass]="{'has-image': topic.thumbnails, 'none-image': !topic.thumbnails}">
+  {{#if topic.thumbnails}}
+    <img
+      src={{fallbackSrc}}
+      srcset={{srcset}}
+      width={{width}}
+      height={{height}}
+      loading="lazy"
+      class="topic-tile-thumbnail"
+    />
+  {{/if}}
 
-  {{plugin-outlet
-    name="below-featured-tiles"
-    tagName=""
-    connectorTagName="div"
-  }}
-{{/if}}
+  <div class="topic-info">
+    <span class="topic-title">{{topic.title}}</span>
+    <span class="author">
+      {{#user-link user=topic.creator}}
+        {{avatar topic.creator imageSize="large"}}
+      {{/user-link}}
+    </span>
+  </div>
+</a>
