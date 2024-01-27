@@ -1,5 +1,5 @@
   {{#if topic.thumbnails}}
-  <a href={{url}}>
+    <a href={{url}} class="has-image">
     <img
       src={{fallbackSrc}}
       srcset={{srcset}}
@@ -9,9 +9,14 @@
       class="topic-tile-thumbnail"
     />
   {{else}}
+    <a href={{url}} class="non-image">
     <img
-      src="default.jpg"
-      class="non-image"
+      src={{fallbackSrc}}
+      srcset={{srcset}}
+      width={{width}}
+      height={{height}}
+      loading="lazy"
+      class="topic-tile-thumbnail"
     />
   {{/if}}
 
