@@ -1,4 +1,4 @@
-<a href={{url}}>
+<a href={{url}} [ngClass]="{'non-image': !topic.thumbnails}">
   {{#if topic.thumbnails}}
     <img
       src={{fallbackSrc}}
@@ -7,7 +7,6 @@
       height={{height}}
       loading="lazy"
       class="topic-tile-thumbnail"
-      onerror="this.onerror=null;this.classList.add('non-image');"
     />
   {{else}}
     <img
