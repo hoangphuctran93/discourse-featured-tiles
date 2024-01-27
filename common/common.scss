@@ -64,3 +64,11 @@
     opacity: 0;
   }
 }
+.topic-info.none-image{
+  justify-content: start;
+  & .topic-title{
+    max-height: 220px;
+    min-height: 220px;
+    margin-top: 40px;
+  }
+}
